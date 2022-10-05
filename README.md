@@ -1,2 +1,2 @@
-# Ray-Glow
- This is a [Sunday Site](https://sundaysites.cafe/) by Francesco Imola built for the 18th session on 9th May 2021
+# Ray/Glow
+ Website created for Session 17th of Sunday Sites Cafe on 9 May 2021
