@@ -12,17 +12,16 @@ let cfade;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(120)
+  frameRate(60);
   maxDiameter = 500;
   theta = 0;
   fade = 0;
-  bkg = color(46, 127, 229)
-  background(bkg)
+  bkg = color(46, 127, 229);
+  background(bkg);
 
   for (let i = 0; i < distribution.length; i++) {
     distribution[i] = floor(randomGaussian(0, 15));
   }
-
 }
 
 function draw() {
@@ -31,10 +30,10 @@ function draw() {
   let eheight = height / 2;
   let c = color(253, 184, 19);
   cfade = color(253, 184, 19, fade);
-  // calculate the diameter of the circle 
+  // calculate the diameter of the circle
   let diam = height / 4 + sin(theta) * maxDiameter;
 
-  // draw the circle 
+  // draw the circle
   stroke(c);
   ellipse(ewidth, eheight, diam, diam);
 
@@ -45,7 +44,7 @@ function draw() {
 
   theta += 0.008;
 
-  if(frameCount % (interval * 30) == 0){
+  if (frameCount % (interval * 30) == 0) {
     background(bkg);
   }
 }
@@ -59,7 +58,7 @@ function makeRays() {
     rotate(TWO_PI / distribution.length);
     stroke(cfade);
     let dist = abs(distribution[i]) * 10;
-    rotate(rot +=speed);
+    rotate((rot += speed));
     ray = line(0, 0, dist, 0);
   }
 

@@ -1,9 +1,41 @@
-html, body {
-    overflow: hidden;
-    padding: 0; 
-    margin: 0;
-    width: 100vw; 
-    height:100vh;
-    text-align: left;
-    background-color: #F9F7F6;
-} 
+html * {
+  font-size: calc(9px + 0.4vw);
+}
+
+html,
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: unset;
+}
+
+.mycanvas {
+  z-index: 1;
+}
+
+.top {
+  font-family: Helvetica, Sans-Serif;
+  color: #FFFF;
+  font-size: 1em;
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  right: 1em;
+  transform-origin: right;
+  transform: rotate(90deg);
+  padding-left: 1em;
+  z-index: 2;
+}
+
+a {
+  color: #ffff;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #fdb813;
+}
